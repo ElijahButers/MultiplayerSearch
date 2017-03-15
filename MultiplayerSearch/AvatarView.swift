@@ -61,6 +61,7 @@ class AvatarView: UIView {
   
   override func didMoveToWindow() {
     layer.addSublayer(photoLayer)
+    photoLayer.mask = maskLayer
   }
   
   override func layoutSubviews() {
