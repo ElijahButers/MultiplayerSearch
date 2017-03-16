@@ -50,5 +50,12 @@ class ViewController: UIViewController {
   @IBAction func actionSearchAgain() {
     UIApplication.shared.keyWindow!.rootViewController = storyboard!.instantiateViewController(withIdentifier: "ViewController") as UIViewController
   }
+    
+    func searchForOpponenet() {
+        
+        let avatarSize = myAvatar.frame.size
+        let bounceXOffset: CGFloat = avatarSize.width/1.9
+        let morphSize = CGSize(width: avatarSize.width * 0.85, height: avatarSize.height * 1.1)
+    }
 }
 
