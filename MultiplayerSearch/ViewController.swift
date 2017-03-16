@@ -51,11 +51,13 @@ class ViewController: UIViewController {
     UIApplication.shared.keyWindow!.rootViewController = storyboard!.instantiateViewController(withIdentifier: "ViewController") as UIViewController
   }
     
-    func searchForOpponenet() {
+    func searchForOpponent() {
         
         let avatarSize = myAvatar.frame.size
         let bounceXOffset: CGFloat = avatarSize.width/1.9
         let morphSize = CGSize(width: avatarSize.width * 0.85, height: avatarSize.height * 1.1)
+        let rightBouncePoint = CGPoint(x: view.frame.size.width/2.0 + bounceXOffset, y: myAvatar.center.y)
+        let leftBouncePoint = CGPoint(x: view.frame.size.width/2.0 - bounceXOffset, y: myAvatar.center.y)
     }
 }
 
