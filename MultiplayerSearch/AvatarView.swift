@@ -98,5 +98,13 @@ class AvatarView: UIView {
         }, completion: {_ in
             //
     })
+        
+        UIView.animate(withDuration: animationDuration, delay: animationDuration, usingSpringWithDamping: 0.7, initialSpringVelocity: 1.0, options: [], animations: {
+            self.center = originalCenter
+        }, completion: {_ in
+            delay(seconds: 0.1) {
+                self.bounceOffPoint(bouncePoint: bouncePoint, morphSize: morphSize)
+            }
+        })
     }
 }
