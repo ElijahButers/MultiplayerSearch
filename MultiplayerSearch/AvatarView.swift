@@ -106,5 +106,7 @@ class AvatarView: UIView {
                 self.bounceOffPoint(bouncePoint: bouncePoint, morphSize: morphSize)
             }
         })
+        
+        let morphedFrame = (originalCenter.x > bouncePoint.x) ? CGRect(x: 0.0, y: bounds.height - morphSize.height, width: morphSize.width, height: morphSize.height): CGRect(x: bounds.width - morphSize.height, y: bounds.height - morphSize.height, width: morphSize.width, height: morphSize.height)
     }
 }
