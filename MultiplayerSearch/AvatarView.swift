@@ -113,5 +113,7 @@ class AvatarView: UIView {
         morphAnimation.duration = animationDuration
         morphAnimation.toValue = UIBezierPath(ovalIn: morphedFrame).cgPath
         morphAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+        
+        circleLayer.add(morphAnimation, forKey: nil)
     }
 }
