@@ -58,6 +58,8 @@ class ViewController: UIViewController {
         let morphSize = CGSize(width: avatarSize.width * 0.85, height: avatarSize.height * 1.1)
         let rightBouncePoint = CGPoint(x: view.frame.size.width/2.0 + bounceXOffset, y: myAvatar.center.y)
         let leftBouncePoint = CGPoint(x: view.frame.size.width/2.0 - bounceXOffset, y: myAvatar.center.y)
+        myAvatar.bounceOffPoint(bouncePoint: rightBouncePoint, morphSize: morphSize)
+        opponentAvatar.bounceOffPoint(bouncePoint: leftBouncePoint, morphSize: morphSize)
     }
 }
 
