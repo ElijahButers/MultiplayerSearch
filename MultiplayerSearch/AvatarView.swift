@@ -115,5 +115,6 @@ class AvatarView: UIView {
         morphAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
         
         circleLayer.add(morphAnimation, forKey: nil)
+        maskLayer.add(morphAnimation, forKey: nil)
     }
 }
