@@ -62,5 +62,14 @@ class ViewController: UIViewController {
         myAvatar.bounceOffPoint(bouncePoint: rightBouncePoint, morphSize: morphSize)
         opponentAvatar.bounceOffPoint(bouncePoint: leftBouncePoint, morphSize: morphSize)
     }
+    
+    func completed() {
+        
+        status.text = "Ready to play"
+        UIView.animate(withDuration: 0.2) {
+            self.vs.alpha = 1.0
+            self.searchAgain.alpha = 1.0
+        }
+    }
 }
 
