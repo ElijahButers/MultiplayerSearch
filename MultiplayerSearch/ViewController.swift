@@ -64,6 +64,13 @@ class ViewController: UIViewController {
         delay(seconds: 1.0, completion: completed)
     }
     
+    func foundOpponent() {
+        
+        status.text = "Connecting..."
+        opponentAvatar.image = UIImage(named: "avatar-2")
+        opponentAvatar.name = "Ray"
+    }
+    
     func completed() {
         
         status.text = "Ready to play"
@@ -72,5 +79,6 @@ class ViewController: UIViewController {
             self.searchAgain.alpha = 1.0
         }
     }
+
 }
 
