@@ -61,7 +61,7 @@ class ViewController: UIViewController {
         let leftBouncePoint = CGPoint(x: view.frame.size.width/2.0 - bounceXOffset, y: myAvatar.center.y)
         myAvatar.bounceOffPoint(bouncePoint: rightBouncePoint, morphSize: morphSize)
         opponentAvatar.bounceOffPoint(bouncePoint: leftBouncePoint, morphSize: morphSize)
-        delay(seconds: 1.0, completion: completed)
+        delay(seconds: 4.0, completion: foundOpponent)
     }
     
     func foundOpponent() {
