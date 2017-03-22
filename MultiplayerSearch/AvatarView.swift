@@ -58,6 +58,7 @@ class AvatarView: UIView {
   }
   
   var shouldTransitionToFinishedState = false
+    var isSquare = false
   
   override func didMoveToWindow() {
     layer.addSublayer(photoLayer)
