@@ -75,6 +75,7 @@ class ViewController: UIViewController {
         status.text = "Connecting..."
         opponentAvatar.image = UIImage(named: "avatar-2")
         opponentAvatar.name = "Ray"
+        delay(seconds: 4.0, completion: connectedToOpponent)
     }
     
     func completed() {
