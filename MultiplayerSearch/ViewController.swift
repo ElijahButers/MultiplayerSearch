@@ -68,6 +68,7 @@ class ViewController: UIViewController {
         
         myAvatar.shouldTransitionToFinishedState = true
         opponentAvatar.shouldTransitionToFinishedState = true
+        delay(seconds: 4.0, completion: completed)
     }
     
     func foundOpponent() {
