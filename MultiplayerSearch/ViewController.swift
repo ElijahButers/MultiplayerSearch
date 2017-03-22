@@ -64,6 +64,12 @@ class ViewController: UIViewController {
         delay(seconds: 4.0, completion: foundOpponent)
     }
     
+    func connectedToOpponent() {
+        
+        myAvatar.shouldTransitionToFinishedState = true
+        opponentAvatar.shouldTransitionToFinishedState = true
+    }
+    
     func foundOpponent() {
         
         status.text = "Connecting..."
