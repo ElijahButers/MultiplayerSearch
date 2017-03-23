@@ -118,4 +118,20 @@ class AvatarView: UIView {
         circleLayer.add(morphAnimation, forKey: nil)
         maskLayer.add(morphAnimation, forKey: nil)
     }
+    
+    func animateToSquare() {
+        
+        isSquare = true
+        
+        let squarePath = UIBezierPath(rect: bounds).cgPath
+        let morph = CABasicAnimation(keyPath: "path")
+        morph.duration = 0.25
+        morph.fromValue = circleLayer.path
+        morph.toValue = squarePath
+        
+        circleLayer.add(morph, forKey: nil)
+        maskLayer.add(morph, forKey: nil)
+        circleLayer.path = squarePath
+        maskLayer.path = squarePath
+    }
 }
